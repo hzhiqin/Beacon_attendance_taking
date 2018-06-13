@@ -1,0 +1,2 @@
+Apache Httpcomponents
+AprilBeacon Android SDK https://github.com/AprilBrother/AprilBeacon-Android-SDK
