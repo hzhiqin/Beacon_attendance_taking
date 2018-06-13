@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".ManagerActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar_ma"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:titleTextColor="@color/colorBarText"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/image_ma"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/portrait"
+        android:layout_below="@+id/toolbar_ma"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/course_text_ma"
+        android:maxLength="7"
+        android:inputType="text"
+        android:layout_below="@+id/text_tip_ma"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_ma"
+        android:layout_below="@+id/course_text_ma"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textRate_ma" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textName_ma"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/image_ma"
+        android:layout_toEndOf="@+id/image_ma"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/search"
+        android:id="@+id/search_ma"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:typeface="monospace"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_ma"
+        android:id="@+id/text_tip_ma"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/image_ma"
+        android:layout_centerHorizontal="true"
+        android:typeface="monospace"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textRate_ma"
+        android:layout_above="@+id/search_ma"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:id="@+id/textView_latePercent"
+        android:layout_above="@+id/search_ma"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:id="@+id/textView_absPercent"
+        android:layout_above="@+id/search_ma"
+        android:layout_toLeftOf="@id/textView_latePercent"
+        android:layout_marginRight="12dp"/>
+
+</RelativeLayout>

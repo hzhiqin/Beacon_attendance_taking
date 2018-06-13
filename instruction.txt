@@ -1,0 +1,6 @@
+attendance.sql --- a copy of test database 
+Beacon type.xlsx --- analysis document of beacon product
+logo.png --- logo of the application
+Checking.apk --- an installation packet of the app
+webapps.zip --- compiled .class file of the server including distribution document. can be put under webapps folder of tomcat.
+Initialization --- a program that can initilize the absence and lateness table according to timetable

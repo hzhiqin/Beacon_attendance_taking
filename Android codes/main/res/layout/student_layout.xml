@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar_stu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:titleTextColor="@color/colorBarText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textName"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/image_user"
+        android:layout_toEndOf="@+id/image_user"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/in_room"
+        android:id="@+id/textLocation"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/textName"
+        android:layout_alignStart="@+id/image_user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/textRoom"
+        android:layout_alignTop="@+id/textLocation"
+        android:layout_toEndOf="@+id/textLocation"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_course"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textCourseToday"
+        android:layout_above="@+id/stu_below" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stu_remind"
+        android:textSize="16sp"
+        android:id="@+id/stu_below"
+        android:textStyle="italic"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh"
+        android:id="@+id/su_refresh"
+        android:layout_below="@+id/textName"
+        android:layout_alignParentEnd="true"
+        android:textSize="10sp"
+        android:typeface="monospace"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/image_user"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/portrait"
+        android:layout_below="@+id/toolbar_stu"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lessons_today"
+        android:id="@+id/textCourseToday"
+        android:layout_below="@+id/textLocation"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:typeface="monospace" />
+
+</RelativeLayout>

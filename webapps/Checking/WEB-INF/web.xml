@@ -1,0 +1,56 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+<context-param>
+		<!---The first day of this semester. The value of month is from 0 to 11 -->
+		<param-name>firstDay</param-name>
+		<param-value>2016/3/1</param-value>
+</context-param>
+
+<servlet>
+	<servlet-name>Login</servlet-name>
+	<servlet-class>servlets.LoginServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>StuCheck</servlet-name>
+	<servlet-class>servlets.CheckServlet</servlet-class>
+	<init-param>
+		<!--The lateness time of lecture. Being late over 20 minutes will be considered as lateness-->
+		<param-name>lateTime</param-name>
+		<param-value>20</param-value>
+	</init-param>
+</servlet>
+<servlet>
+	<servlet-name>ViewCheck</servlet-name>
+	<servlet-class>servlets.ViewServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>Manager</servlet-name>
+	<servlet-class>servlets.ManagerServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>RecordData</servlet-name>
+	<servlet-class>servlets.RecordServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>	
+
+<servlet-mapping>
+	<servlet-name>Login</servlet-name>
+	<url-pattern>/Login.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>StuCheck</servlet-name>
+	<url-pattern>/Student.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>Manager</servlet-name>
+	<url-pattern>/Manager.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>ViewCheck</servlet-name>
+	<url-pattern>/View.do</url-pattern>
+</servlet-mapping>
+
+</web-app>
